@@ -51,6 +51,8 @@ pipeline {
         stage("Maven Run Artifact") {
             steps {
                 bat 'java -jar target/spring-boot-web.jar'
+                bat 'start http://localhost:8888'
+
             }
         }
     }
