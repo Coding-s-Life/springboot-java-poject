@@ -20,7 +20,7 @@ pipeline {
         }
         stage("Checkout from SCM") {
             steps {
-                git branch: 'main'  credentialsId: 'github', url: 'https://github.com/Coding-s-Life/springboot-java-poject'
+                git branch: 'main',  credentialsId: 'github', url: 'https://github.com/Coding-s-Life/springboot-java-poject'
             }
         }
         stage("Maven Validate") {
