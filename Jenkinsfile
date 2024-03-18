@@ -48,12 +48,12 @@ pipeline {
                 bat 'mvn install'
             }
         }
-        stage("Maven Run Artifact") {
-            steps {
-                bat 'java -jar target/spring-boot-web.jar'
-                bat 'start http://localhost:8888'
-
-            }
-        }
+//         stage("Maven Run Artifact") {
+//             steps {
+//                 bat 'java -jar target/spring-boot-web.jar'
+//                 bat 'start http://localhost:8888'
+//
+//             }
+//         }
     }
 }
