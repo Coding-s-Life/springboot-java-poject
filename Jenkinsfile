@@ -23,7 +23,7 @@ pipeline {
                 git branch: 'main'  credentialsId: 'github', url: 'https://github.com/Coding-s-Life/springboot-java-poject'
             }
         }
-        stage("Maven Validate"){
+        stage("Maven Validate") {
             steps {
                 bat 'mvn validate'
             }
@@ -33,8 +33,8 @@ pipeline {
                 bat 'mvn compile'
             }
         }
-        stage("Maven Test"){
-            steps{
+        stage("Maven Test") {
+            steps {
                 bat 'mvn test'
             }
         }
@@ -44,8 +44,8 @@ pipeline {
             }
         }
         stage("Maven Install") {
-            steps{
-                bat 'mvn '
+            steps {
+                bat 'mvn install'
             }
         }
         stage("Maven Run Artifact") {
